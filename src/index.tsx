@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 // import ListarAlunos from './componentes/listarAlunos/listarAlunos';
 import UseStateTeste from './componentes/listarAlunos/useStateTeste/UseStateTeste';
+import Card from './componentes/listarAlunos/input/input';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,7 +14,8 @@ root.render(
   <React.StrictMode>
     <App />
     {/* <ListarAlunos/> */}
-    <UseStateTeste/>
+    {/* <UseStateTeste/> */}
+    <Card></Card>
   </React.StrictMode>
 );
 
