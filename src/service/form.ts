@@ -10,11 +10,26 @@ function Form() {
   var valueBairro = bairro.value.toString();
   var telefone = document.getElementById("telefone") as HTMLInputElement;
   var telefoneValue = Number(telefone.value);
-  result.innerHTML = ``
 
-  if (inputValue === "" || inputValueNumber === Number() || valueEndereco === "" || valueBairro === "" || telefoneValue === Number()) {
-    alert("Preencha todos os campos");
-  } else { result.innerHTML = `<div> 
+  result.innerHTML = ``;
+  input.classList.remove("campo-vazio");
+  endereco.classList.remove("campo-vazio");
+  bairro.classList.remove("campo-vazio");
+  telefone.classList.remove("campo-vazio");
+
+  if (inputValueNumber === Number()) {
+    input.classList.add("campo-vazio");
+  }
+  if (valueEndereco === "") {
+    endereco.classList.add("campo-vazio");
+  }
+  if (valueBairro === "") {
+    bairro.classList.add("campo-vazio");
+  }
+  if (telefoneValue === Number()) {
+    telefone.classList.add("campo-vazio");
+  } else {
+    result.innerHTML = `<div> 
       <h2>
           Nome: ${inputValue}
       </h2>
@@ -31,6 +46,7 @@ function Form() {
           Número: ${telefoneValue}
       </h2>
     </div>`;
-}}
+  }
+}
 
 export default Form;
